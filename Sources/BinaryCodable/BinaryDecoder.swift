@@ -12,7 +12,7 @@ public struct BinaryDecoder: ~Copyable {
 	@usableFromInline let bytes: ByteCollection
 	@usableFromInline var index: ByteCollection.Index
 
-	@usableFromInline init(of bytes: ByteCollection) {
+	@inlinable public init(of bytes: ByteCollection) {
 		self.bytes = bytes
 		index = bytes.startIndex
 	}

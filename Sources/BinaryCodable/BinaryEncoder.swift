@@ -11,7 +11,7 @@ public struct BinaryEncoder: ~Copyable {
 
 	public var bytes: ByteCollection = []
 
-	@usableFromInline init() { }
+	@inlinable public init() { }
 
 }
 
