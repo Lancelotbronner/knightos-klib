@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
 	name: "klib",
 	products: [
-		.library(name: "klib", targets: ["BinaryCodable", "Json"]),
+		.library(name: "klib2", targets: ["BinaryCodable", "Json"]),
 	],
 	targets: [
 		.target(name: "BinaryCodable"),
