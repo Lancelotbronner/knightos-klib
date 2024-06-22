@@ -78,8 +78,12 @@ extension BinaryDecoder {
 
 extension BinaryDecoder {
 
-	@inlinable public mutating func bytes(_ count: some BinaryInteger) -> [UInt8] {
-		Array(consume(count))
+	@inlinable public mutating func bytes(_ length: some BinaryInteger) -> [UInt8] {
+		Array(consume(length))
+	}
+
+	@inlinable public mutating func bytes<I: FixedWidthInteger>(_ length: I.Type) -> [UInt8] {
+		bytes(decode(I.self))
 	}
 
 }

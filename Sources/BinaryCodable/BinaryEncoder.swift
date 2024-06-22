@@ -53,8 +53,13 @@ extension BinaryEncoder {
 
 extension BinaryEncoder {
 
-	@inlinable public mutating func bytes(_ count: some Sequence<UInt8>) {
-		bytes.append(contentsOf: count)
+	@inlinable public mutating func bytes(_ value: some Sequence<UInt8>) {
+		bytes.append(contentsOf: value)
+	}
+
+	@inlinable public mutating func bytes<I: FixedWidthInteger>(_ value: some Collection<UInt8>, length: I.Type) {
+		encode(I(value.count))
+		bytes.append(contentsOf: value)
 	}
 
 }
