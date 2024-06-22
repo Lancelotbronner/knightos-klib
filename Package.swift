@@ -6,9 +6,12 @@ import PackageDescription
 let package = Package(
 	name: "klib",
 	products: [
-		.library(name: "klib", targets: ["BinaryCodable", "Json"]),
+		.library(name: "klib", targets: ["klibcmd"]),
+		.library(name: "KUtilities", targets: ["BinaryCodable", "Json"]),
 	],
 	targets: [
+		.target(name: "klibcmd"),
+
 		.target(name: "BinaryCodable"),
 		.target(name: "Json"),
 	],
