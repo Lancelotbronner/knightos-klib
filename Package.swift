@@ -6,11 +6,10 @@ import PackageDescription
 let package = Package(
 	name: "klib",
 	products: [
-		.library(name: "klib2", targets: ["BinaryCodable", "Json", "HttpClient"]),
+		.library(name: "klib2", targets: ["BinaryCodable", "Json"]),
 	],
 	targets: [
 		.target(name: "BinaryCodable"),
 		.target(name: "Json"),
-		.target(name: "HttpClient"),
 	]
 )
